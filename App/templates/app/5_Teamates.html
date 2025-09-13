@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Information and Friend Code Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ttZ5UjOr8Nen5InC2C1QFkVskwMJjsn7x++hHl8I7j2vv6J4OSiHbR7Oo+d12OV3KBgNyQU4rOcA1j6FZI3HDg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="/static/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+   <style>
+        body {
+            background-color: #eec7c2;
+            background-image: url(''); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .info-section, .form-section {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .info-section {
+            border-left: 5px solid #007bff;
+        }
+        .form-section {
+            border-left: 5px solid #28a745;
+        }
+        .success-background {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        h2, h4 {
+            color: #333333;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+            background-color: #f2f2f2;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        ul li i {
+            margin-right: 10px;
+            color: #007bff; /* Adjust color as needed */
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .form-control {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/static/images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    AI CARDIOLOGIST 
+                    <small>using ml & dl</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="info-section">
+            {% if prediction_text == 'THE CARDIOVASCULAR MIGHT BE LESS CHANCE OF HEART ATTACK' %}
+            
+            <h2>Heart Failure Information</h2>
+            <center><h4>THE CARDIOVASCULAR MIGHT BE LESS CHANCE OF HEART ATTACK</h4></center><br>
+            <center><h4><p class="text-success">Reducing Your Risk of Heart Attack</p></h4></center>
+    
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="bi bi-chat-heart"></i> Causes of Heart Attack</td>
+                        <td>
+                            <ul>
+                                <li><i class="fas fa-heartbeat"></i> <strong>Coronary Artery Disease (CAD):</strong> Narrowed arteries reduce blood flow to the heart muscle.</li>
+                                <li><i class="fas fa-tachometer-alt"></i> <strong>High Blood Pressure (Hypertension):</strong> Increases the risk of heart muscle thickening or weakening.</li>
+                                <li><i class="fas fa-heart"></i> <strong>Heart Attack:</strong> Can cause damage to the heart muscle.</li>
+                                <li><i class="fas fa-procedures"></i> <strong>Cardiomyopathy:</strong> Diseases of the heart muscle from causes like infections, alcohol abuse, or genetics.</li>
+                                <li><i class="fas fa-shield-alt"></i> <strong>Valve Disease:</strong> Defects in the heart valves can strain the heart.</li>
+                                <li><i class="fas fa-heartbeat"></i> <strong>Arrhythmias:</strong> Irregular heartbeats can affect heart function.</li>
+                                <li><i class="fas fa-baby"></i> <strong>Congenital Heart Defects:</strong> Structural heart problems present at birth.</li>
+                                <li><i class="fas fa-procedures"></i> <strong>Chronic Diseases:</strong> Conditions like diabetes, HIV, thyroid disorders, and obesity can contribute to heart health issues.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Prevention and Healthy Practices</td>
+                        <td>
+                            <ul>
+                                <li><strong>Monitor Blood Pressure:</strong> Regular checks and management of hypertension.</li>
+                                <li><strong>Maintain Healthy Cholesterol Levels:</strong> Follow a diet low in saturated fats and rich in fiber.</li>
+                                <li><strong>Regular Exercise:</strong> Aim for at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity per week.</li>
+                                <li><strong>Maintain Healthy Weight:</strong> Keep your BMI within the normal range.</li>
+                                <li><strong>Limit Alcohol and Quit Smoking:</strong> Both habits can damage the heart.</li>
+                                <li><strong>Manage Stress:</strong> Use relaxation techniques like yoga or meditation.</li>
+                                <li><strong>Healthy Diet:</strong> Focus on fruits, vegetables, whole grains, and lean proteins.</li>
+                                <li><strong>Regular Check-ups:</strong> Schedule routine visits to monitor heart health with a healthcare provider.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Managing Heart Health</td>
+                        <td>
+                            <ul>
+                                <li><strong>Medications:</strong> Take prescribed medications to manage conditions and prevent complications.</li>
+                                <li><strong>Monitor Symptoms:</strong> Pay attention to any changes in health or discomfort.</li>
+                                <li><strong>Dietary Adjustments:</strong> Consider reducing sodium intake to maintain fluid balance.</li>
+                                <li><strong>Fluid Intake:</strong> Follow recommendations for daily fluid consumption.</li>
+                                <li><strong>Physical Activity:</strong> Engage in suitable exercises, such as walking or cycling, as recommended by your healthcare provider.</li>
+                                <li><strong>Regular Monitoring:</strong> Regular check-ups to assess heart function and adjust treatments as needed.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exercise for Cardiovascular Health</td>
+                        <td>
+                            <ul>
+                                <li><strong>Walking:</strong> Start with short distances and gradually increase.</li>
+                                <li><strong>Cycling:</strong> Use stationary bikes for cardiovascular benefits.</li>
+                                <li><strong>Swimming:</strong> Consider gentle swimming or water aerobics to reduce joint stress.</li>
+                                <li><strong>Strength Training:</strong> Incorporate light weights to build muscle strength.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            {% elif prediction_text == 'THE CARDIOVASCULAR MIGHT BE MORE CHANCE OF HEART ATTACK' %}
+    
+            <center><h4><p class="text-danger">THE CARDIOVASCULAR MIGHT BE MORE CHANCE OF HEART ATTACK</p></h4></center><br><br>
+    
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="bi bi-chat-heart"></i> Causes of Heart Failure</td>
+                        <td>
+                            <ul>
+                                <li><i class="fas fa-heartbeat"></i> <strong>Coronary Artery Disease (CAD):</strong> Narrowed arteries reduce blood flow to the heart muscle.</li>
+                                <li><i class="fas fa-tachometer-alt"></i> <strong>High Blood Pressure (Hypertension):</strong> Forces the heart to work harder than normal, leading to heart muscle thickening or weakening.</li>
+                                <li><i class="fas fa-heart"></i> <strong>Heart Attack:</strong> Causes damage to the heart muscle.</li>
+                                <li><i class="fas fa-procedures"></i> <strong>Cardiomyopathy:</strong> Diseases of the heart muscle from causes like infections, alcohol abuse, or genetics.</li>
+                                <li><i class="fas fa-shield-alt"></i> <strong>Valve Disease:</strong> Defects in the heart valves force the heart to pump harder.</li>
+                                <li><i class="fas fa-heartbeat"></i> <strong>Arrhythmias:</strong> Irregular heartbeats can cause the heart to pump less effectively.</li>
+                                <li><i class="fas fa-baby"></i> <strong>Congenital Heart Defects:</strong> Structural problems present at birth.</li>
+                                <li><i class="fas fa-procedures"></i> <strong>Chronic Diseases:</strong> Conditions like diabetes, HIV, thyroid disorders, and obesity can contribute to heart failure.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Prevention and Precautions</td>
+                        <td>
+                            <ul>
+                                <li><strong>Control Blood Pressure:</strong> Regularly monitor and manage hypertension.</li>
+                                <li><strong>Maintain Healthy Cholesterol Levels:</strong> Follow a diet low in saturated fats and high in fiber.</li>
+                                <li><strong>Exercise Regularly:</strong> Aim for at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity per week.</li>
+                                <li><strong>Maintain a Healthy Weight:</strong> Aim for a BMI within the normal range.</li>
+                                <li><strong>Limit Alcohol and Quit Smoking:</strong> Both can damage the heart over time.</li>
+                                <li><strong>Manage Stress:</strong> Practice relaxation techniques like yoga or meditation.</li>
+                                <li><strong>Healthy Diet:</strong> Focus on fruits, vegetables, whole grains, and lean proteins.</li>
+                                <li><strong>Regular Check-ups:</strong> Regular visits to a healthcare provider for monitoring heart health.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Managing Heart Failure</td>
+                        <td>
+                            <ul>
+                                <li><strong>Medications:</strong> Take prescribed medications to manage symptoms and prevent progression.</li>
+                                <li><strong>Monitor Symptoms:</strong> Keep track of symptoms like swelling, shortness of breath, and fatigue.</li>
+                                <li><strong>Dietary Changes:</strong> Reduce sodium intake to prevent fluid retention.</li>
+                                <li><strong>Fluid Restriction:</strong> Follow any fluid intake recommendations.</li>
+                                <li><strong>Physical Activity:</strong> Engage in low-impact exercises such as walking or cycling as advised by a healthcare provider.</li>
+                                <li><strong>Regular Monitoring:</strong> Frequent check-ups to monitor heart function and adjust treatments.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Physical Exercise for Heart Failure Patients</td>
+                        <td>
+                            <ul>
+                                <li><strong>Walking:</strong> Start with short distances and gradually increase.</li>
+                                <li><strong>Cycling:</strong> Use stationary bikes for a low-impact workout.</li>
+                                <li><strong>Swimming:</strong> Gentle swimming or water aerobics to minimize joint stress.</li>
+                                <li><strong>Strength Training:</strong> Use light weights to build muscle strength.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+    
+
+    <!-- Add a Contact Section -->
+    
+
+</body>
+<!-- JAVASCRIPT FILES -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.sticky.js"></script>
+<script src="/static/js/click-scroll.js"></script>
+<script src="/static/js/counter.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

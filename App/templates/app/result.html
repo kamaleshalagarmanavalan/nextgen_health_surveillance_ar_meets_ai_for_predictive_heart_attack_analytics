@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ predict | upper }} Prediction</title>
+    
+<style>
+/* General Body Styling */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Card Styling */
+.card {
+    margin-top: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgb(240, 29, 29);
+    text-align: center;
+}
+
+.card img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Section Styling */
+.section {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Exercise and Dietary Recommendations Styling */
+.exercise {
+    margin-top: 20px;
+}
+
+h3 {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Button Hover Effect */
+button.navbar-toggler {
+    border-color: #007bff;
+}
+
+button.navbar-toggler:hover {
+    background-color: #007bff;
+}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+</style>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+<link href="/static/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+   
+
+     
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/static/images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    AI CARDIOLOGIST 
+                    <small>using ml & dl</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    {% if user.is_authenticated %}
+
+                    
+
+                    
+                    
+
+                    
+                    {% else %}
+                    
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <br>
+    <br><br><br>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-content">
+                <img src="{{ obj.image.url }}" alt="Input Images" class="mb-4">
+                <p class="card-title">{{ predict | upper }}</p>
+            </div>
+        </div>
+    </div>
+    
+    {% if obj %}
+        <!-- Haemoglobin Level Section -->
+        {% if predict == 'Haemoglobin Level' %}
+            <div id="Haemoglobin-Level" class="section">
+                <h2>Haemoglobin Level</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td>Haemoglobin diseases affect the oxygen-carrying capacity of red blood cells. Common types include sickle cell disease and thalassemia.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Symptoms</strong></td>
+                        <td>
+                            <ul>
+                                <li>Fatigue and weakness</li>
+                                <li>Pale skin</li>
+                                <li>Shortness of breath</li>
+                                <li>Dizziness</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prevention and Precautions</strong></td>
+                        <td>
+                            <ul>
+                                <li>Eat iron-rich foods like spinach and red meat.</li>
+                                <li>Take iron supplements if prescribed by a doctor.</li>
+                                <li>Regular medical check-ups.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dietary Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li><strong>Morning:</strong> Iron-fortified cereals and fruits.</li>
+                                <li><strong>Noon:</strong> Lean proteins like chicken with vegetables.</li>
+                                <li><strong>Evening:</strong> Red meat or beans with whole grains.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exercise Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li>Light exercises like walking or swimming.</li>
+                                <li>Avoid strenuous activities.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+        <!-- Myocardial Infarction Section -->
+        {% elif predict == 'Myocardial Infarction' %}
+            <div id="Myocardial-Infarction" class="section">
+                <h2>Myocardial Infarction</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td>Myocardial infarction, commonly known as a heart attack, occurs when blood flow to a part of the heart is blocked, causing damage or death of heart muscle tissue.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Symptoms</strong></td>
+                        <td>
+                            <ul>
+                                <li>Chest pain or discomfort</li>
+                                <li>Shortness of breath</li>
+                                <li>Sweating</li>
+                                <li>Nausea or vomiting</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prevention and Precautions</strong></td>
+                        <td>
+                            <ul>
+                                <li>Maintain a healthy diet low in saturated fats.</li>
+                                <li>Exercise regularly and maintain a healthy weight.</li>
+                                <li>Quit smoking and limit alcohol intake.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dietary Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li><strong>Morning:</strong> Oatmeal with fruits and nuts.</li>
+                                <li><strong>Noon:</strong> Grilled chicken or fish with vegetables.</li>
+                                <li><strong>Evening:</strong> Whole-grain pasta with tomato sauce.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exercise Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li>Cardiac rehabilitation with monitored exercises.</li>
+                                <li>Gradual increase in physical activity under medical guidance.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+        <!-- Normal Section -->
+        {% elif predict == 'Normal' %}
+            <div id="Normal" class="section">
+                <h2>Normal</h2>
+                <p>No specific condition detected in the ECG classification.</p>
+            </div>
+    
+        <!-- Point of Maximal Impulse Section -->
+        {% elif predict == 'Point of Maximal Impulse' %}
+            <div id="Point-of-Maximal-Impulse" class="section">
+                <h2>Point of Maximal Impulse</h2>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Description</strong></td>
+                        <td>The point of maximal impulse (PMI) refers to the area on the chest where the heartbeat is most palpable or audible.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Symptoms</strong></td>
+                        <td>
+                            <ul>
+                                <li>Visible or palpable pulsation on the chest wall.</li>
+                                <li>Abnormal heartbeat patterns.</li>
+                                <li>Chest pain or discomfort.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prevention and Precautions</strong></td>
+                        <td>
+                            <ul>
+                                <li>Regular heart check-ups to monitor heart function.</li>
+                                <li>Manage underlying heart conditions.</li>
+                                <li>Avoid excessive physical exertion.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dietary Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li><strong>Morning:</strong> Light breakfast with fruits.</li>
+                                <li><strong>Noon:</strong> Grilled chicken or fish with vegetables.</li>
+                                <li><strong>Evening:</strong> Tofu or beans with whole grains.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exercise Recommendations</strong></td>
+                        <td>
+                            <ul>
+                                <li>Light to moderate exercises like walking or gentle yoga.</li>
+                                <li>Avoid strenuous activities that may increase heart workload.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+    {% endif %}
+    
+
+       
+        
+    </body>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <script src="/static/js/click-scroll.js"></script>
+    <script src="/static/js/counter.js"></script>
+    <script src="/static/js/custom.js"></script>
+    </div>
+
+<script>
+    // Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Toggle Navbar Menu on Small Screens
+const navbarToggler = document.querySelector('.navbar-toggler');
+navbarToggler.addEventListener('click', function () {
+    const navbarMenu = document.querySelector('#navbarNav');
+    navbarMenu.classList.toggle('show');
+});
+
+</script>
